@@ -6,7 +6,6 @@ def createReport(path, report_array):
     file = open(path, 'a')
     for line in report_array:
         file.write(line)
-    import pdb;pdb.set_trace()
     file.close()
         
 def generateReportData(students_array, presence_array):
