@@ -36,4 +36,13 @@ students_array
 ```
 presence_array
 ```
-- este arreglo almacenará los datos del comando **Presence** 
+- este arreglo almacenará los datos del comando **Presence**
+
+### 6. Los datos para generar el reporte se ordenan considerando como llave el alumno con menor cantidad de horas
+### después se invierten para conservar el con mayor cantidad de horas quede en la cabecera.
+
+### 7. Las pruebas para generar el reporte fallaron todas, pero resultado esperado se obtiene en la ejecución del script
+
+
+
+
