@@ -23,6 +23,7 @@ def generateReportData(students_array, presence_array):
                 continue
         if total_minutes == 0:
             report_array.append(student_name[1] + ': ' + str(total_minutes) + ' minutes\n')
+            continue
         days = ' days' if total_days > 1 else ' day'
         report_array.append(student_name[1] + ': ' + str(total_minutes) + ' minutes in ' + str(total_days) + days + '\n')
     return report_array
@@ -54,5 +55,6 @@ if __name__ == '__main__':
         students_array.sort()
         presence_array.sort()
         report_data = generateReportData(students_array, presence_array)
+        import pdb;pdb.set_trace()
         createReport(report_file, report_data)
         print('=D')
