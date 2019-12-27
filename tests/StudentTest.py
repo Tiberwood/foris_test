@@ -20,4 +20,4 @@ class StudentTest(unittest.TestCase):
         d1_ts = mktime(d1.timetuple())
         d2_ts = mktime(d2.timetuple())
         result = int(d2_ts - d1_ts) / 60
-        self.assertGreater(result, 1)
+        self.assertGreater(result, 1)        
