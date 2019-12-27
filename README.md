@@ -32,8 +32,8 @@ output.txt
 students_array
 ```
 	
-- este arreglo tiene como objetivo almacenar los datos del commando ** Student **
+- este arreglo tiene como objetivo almacenar los datos del commando **Student**
 ```
 presence_array
 ```
-- este arreglo almacenará los datos del comando ** Presence ** 
+- este arreglo almacenará los datos del comando **Presence** 
