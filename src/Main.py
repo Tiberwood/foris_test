@@ -55,5 +55,4 @@ if __name__ == '__main__':
         presence_array.sort()
         report_data = generateReportData(students_array, presence_array)
         createReport(report_file, report_data)
-        
         print('=D')
