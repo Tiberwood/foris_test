@@ -1,5 +1,6 @@
 from classes import Student
 import sys
+import pdb
 
 def createReport(path, report_array):
     file = open(path, 'w')
@@ -23,11 +24,19 @@ def generateReportData(students_array, presence_array):
                 continue
         if total_minutes == 0:
             report_array.append(student_name[1] + ': ' + str(total_minutes) + ' minutes\n')
+            report_array.sort(key=sortValue)
             continue
         days = ' days' if total_days > 1 else ' day'
         report_array.append(student_name[1] + ': ' + str(total_minutes) + ' minutes in ' + str(total_days) + days + '\n')
+    report_array.sort(key=sortValue)
     return report_array
 
+def sortValue(val):
+    return val[1]
+
+def sortReportValue(val):
+    value = val.split(' ')
+    return value[1]
 
 if __name__ == '__main__':
     filename = str(sys.argv[1])
@@ -52,9 +61,9 @@ if __name__ == '__main__':
                 presence_array.append(values_array)
                 continue
         #sort the arrays
-        students_array.sort()
-        presence_array.sort()
+        students_array.sort(key=sortValue)
+        presence_array.sort(key=sortValue)
         report_data = generateReportData(students_array, presence_array)
-        import pdb;pdb.set_trace()
+        report_data.sort(key=sortReportValue, reverse=True)
         createReport(report_file, report_data)
         print('=D')
